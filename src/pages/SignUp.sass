@@ -1,0 +1,123 @@
+.box
+    display: flex
+    width: 100%
+    height: 100vh
+    background-color: #ADD8E6
+    align-items: center
+    justify-content: center
+
+    .cont
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: #fff
+        width: 350px
+        height: 560px
+        padding: 25px
+        border-radius: 20px
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+
+        form
+            display: flex
+            flex-direction: column
+            gap: 20px
+            width: 100%
+
+            button
+                width: 300px
+                height: 45px
+                border-radius: 10px
+                background-color: #f297ac
+                border: none
+                cursor: pointer
+                font-family: monospace
+                font-weight: 700
+                color: #FFF
+                margin-top: 10px
+                transition: background-color 0.2s
+
+                &:hover
+                    background-color: #e07b92
+
+            p
+                font-family: monospace
+                font-size: 24px
+                font-weight: 600
+                text-align: center
+                margin-bottom: 5px
+
+            label
+                display: flex
+                flex-direction: column
+                gap: 8px
+                font-size: 14px
+                font-family: monospace
+                font-weight: 600
+
+                input
+                    width: 300px
+                    height: 45px
+                    outline: none
+                    text-indent: 15px
+                    font-family: monospace
+                    border: 2px solid #ccc
+                    border-radius: 10px
+                    
+                    &::placeholder
+                        color: #CCC
+
+        .divider
+            display: flex
+            align-items: center
+            text-align: center
+            width: 300px
+            margin: 20px 0
+
+            &::before, &::after
+                content: ""
+                flex: 1
+                border-bottom: 1px solid #ccc
+
+            &::before
+                margin-right: 10px
+
+            &::after
+                margin-left: 10px
+
+            span
+                color: #ccc
+                font-family: monospace
+                font-size: 14px
+                font-weight: 600
+                border: 1px solid #ccc
+                padding: 4px 8px
+                border-radius: 6px
+                text-transform: uppercase
+
+        .icons
+            display: flex
+            gap: 30px
+            align-items: center
+            margin-bottom: 15px
+            
+            img
+                width: 40px
+                cursor: pointer
+            
+            .s
+                width: 55px
+
+        .switch-link
+            font-family: monospace
+            font-size: 16px
+            color: #555
+            cursor: pointer
+            margin-top: 10px
+            margin-top: -0.5rem
+
+            span  
+                font-family: monospace
+                color: #f297ac
+                font-weight: bold
+                margin-left: 5px
+                text-decoration: underline

@@ -1,9 +1,7 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-
-
+import "./SignIn.sass"
 
 function Signin() {
     const { login } = useAuth()
@@ -13,11 +11,7 @@ function Signin() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
-        const success = login(
-            name,
-            password
-        )
+        const success = login(name, password)
         if (success) {
             navigate("/")
         } else {
@@ -26,28 +20,31 @@ function Signin() {
     }
 
     return (
-        <div className="">
-            <div className="">
-                <form onSubmit={handleSubmit} className="">
-                    <label className=''>Name
-                        <input className='' type="text"
+        <div className="box">
+            <div className="cont signin-cont">
+                <form onSubmit={handleSubmit}>
+                    <p>SignIn</p>
+                    <label>Name
+                        <input 
+                            type="text"
                             placeholder='Enter your name'
-                            onChange={(e) =>
-                                setName(e.target.value)
-                            } />
+                            onChange={(e) => setName(e.target.value)} 
+                        />
                     </label>
-                    <label className=''>Password
-                        <input className='' type="password"
+                    <label>Password
+                        <input 
+                            type="password"
                             placeholder='Password'
-                            onChange={(e) =>
-                                setPassword(e.target.value)
-                            } />
+                            onChange={(e) => setPassword(e.target.value)} 
+                        />
                     </label>
 
-                    <button className=''>Login</button>
+                    <button type="submit">Login</button>
                 </form>
 
-                <p className='' onClick={() => navigate('/signup')}> <span>Sign Up</span></p>
+                <p className='switcht-link' onClick={() => navigate('/signup')}>
+                    Don't have an account? <span>Sign Up</span>
+                </p>
             </div>
         </div>
     )

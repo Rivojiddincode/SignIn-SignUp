@@ -1,0 +1,144 @@
+.box
+    display: flex
+    width: 100%
+    height: 100vh
+    background-color: #ADD8E6
+    align-items: center
+    justify-content: center
+
+    .cont
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: #fff
+        width: 350px
+        height: 560px // Ro'yxatdan o'tish sahifasi uchun balandlik
+        padding: 25px
+        border-radius: 20px
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08)
+
+        &.signin-cont
+            height: 380px // Kirish sahifasida elementlar kamligi uchun ixcham balandlik
+
+        form
+            display: flex
+            flex-direction: column
+            gap: 20px
+            width: 100%
+
+            p
+                font-family: monospace
+                font-size: 26px
+                font-weight: 700
+                text-align: center
+                margin-bottom: 5px
+                color: #333
+
+            label
+                display: flex
+                flex-direction: column
+                gap: 8px
+                font-size: 14px
+                font-family: monospace
+                font-weight: 600
+                color: #555
+
+                input
+                    width: 300px
+                    height: 45px
+                    outline: none
+                    text-indent: 15px
+                    font-family: monospace
+                    border: 2px solid #ccc
+                    border-radius: 10px
+                    transition: border-color 0.2s
+                    
+                    &:focus
+                        border-color: #f297ac
+
+                    &::placeholder
+                        color: #CCC
+
+            button
+                width: 300px
+                height: 45px
+                border-radius: 10px
+                background-color: #f297ac
+                border: none
+                cursor: pointer
+                font-family: monospace
+                font-weight: 700
+                color: #FFF
+                margin-top: 10px
+                font-size: 16px
+                transition: background-color 0.2s, transform 0.1s
+
+                &:hover
+                    background-color: #e07b92
+
+                &:active
+                    transform: scale(0.98)
+
+        .divider
+            display: flex
+            align-items: center
+            text-align: center
+            width: 300px
+            margin: 22px 0
+
+            &::before, &::after
+                content: ""
+                flex: 1
+                border-bottom: 1px solid #eee
+
+            &::before
+                margin-right: 12px
+
+            &::after
+                margin-left: 12px
+
+            span
+                color: #bbb
+                font-family: monospace
+                font-size: 13px
+                font-weight: 600
+                border: 1px solid #eee
+                padding: 4px 10px
+                border-radius: 6px
+                text-transform: uppercase
+                background-color: #fff
+
+        .icons
+            display: flex
+            gap: 25px
+            align-items: center
+            margin-bottom: 20px
+            
+            img
+                width: 38px
+                cursor: pointer
+                transition: transform 0.2s
+                
+                &:hover
+                    transform: scale(1.1)
+            
+            .s
+                width: 48px
+
+        .switcht-link
+            font-family: monospace
+            font-size: 13px
+            color: #666
+            cursor: pointer
+            margin-top: 15px
+            user-select: none
+            
+            span  
+                font-family: monospace
+                color: #f297ac
+                font-weight: 700
+                margin-left: 6px
+                text-decoration: underline
+                
+                &:hover
+                    color: #e07b92
