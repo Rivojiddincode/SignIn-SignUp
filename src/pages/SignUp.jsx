@@ -82,7 +82,7 @@ function Signup() {
 
 
 </div>
-<p className='switch-link' onClick={() => navigate('/signin')}>Already a user?<span>LOGIN</span></p>
+<p className='switch-link' onClick={() => navigate('/signin')}>Are you already a user?<span>LOGIN</span></p>
 
 
 
