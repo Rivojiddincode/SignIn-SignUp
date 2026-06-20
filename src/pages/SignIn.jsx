@@ -8,14 +8,14 @@ import { useAuth } from '../context/AuthContext'
 function Signin() {
     const { login } = useAuth()
     const navigate = useNavigate()
-    const [email, setEmail] = useState("")
+    const [name, setName] = useState("")
     const [password, setPassword] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
         const success = login(
-            email,
+            name,
             password
         )
         if (success) {
@@ -29,11 +29,11 @@ function Signin() {
         <div className="">
             <div className="">
                 <form onSubmit={handleSubmit} className="">
-                    <label className=''>Email
-                        <input className='' type="email"
-                            placeholder='Email'
+                    <label className=''>Name
+                        <input className='' type="text"
+                            placeholder='Enter your name'
                             onChange={(e) =>
-                                setEmail(e.target.value)
+                                setName(e.target.value)
                             } />
                     </label>
                     <label className=''>Password
